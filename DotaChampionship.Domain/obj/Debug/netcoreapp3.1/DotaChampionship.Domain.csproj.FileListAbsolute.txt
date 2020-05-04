@@ -1,0 +1,12 @@
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\bin\Debug\netcoreapp3.1\DotaChampionship.Domain.deps.json
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\bin\Debug\netcoreapp3.1\DotaChampionship.Domain.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\obj\Debug\netcoreapp3.1\DotaChampionship.Domain.csprojAssemblyReference.cache
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\obj\Debug\netcoreapp3.1\DotaChampionship.Domain.AssemblyInfoInputs.cache
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\obj\Debug\netcoreapp3.1\DotaChampionship.Domain.AssemblyInfo.cs
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\bin\Debug\netcoreapp3.1\DotaChampionship.Domain.runtimeconfig.json
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\bin\Debug\netcoreapp3.1\DotaChampionship.Domain.runtimeconfig.dev.json
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\bin\Debug\netcoreapp3.1\DotaChampionship.Domain.pdb
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\obj\Debug\netcoreapp3.1\DotaChampionship.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\obj\Debug\netcoreapp3.1\DotaChampionship.Domain.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\obj\Debug\netcoreapp3.1\DotaChampionship.Domain.pdb
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Domain\obj\Debug\netcoreapp3.1\DotaChampionship.Domain.genruntimeconfig.cache

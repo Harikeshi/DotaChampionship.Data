@@ -1,0 +1,15 @@
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Domain.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.csprojAssemblyReference.cache
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.AssemblyInfoInputs.cache
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.AssemblyInfo.cs
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Data.deps.json
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Data.runtimeconfig.json
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Data.runtimeconfig.dev.json
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Data.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Data.pdb
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Domain.pdb
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.csproj.CoreCompileInputs.cache
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.csproj.CopyComplete
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.pdb
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.genruntimeconfig.cache
