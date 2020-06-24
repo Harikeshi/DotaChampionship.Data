@@ -20,7 +20,9 @@ namespace WebApplication
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>()
+                    //Отключение проверки области видимости. Без такого изменения попытка создать схему базы данных в следvющем разделе приведет к генерации исключения.
+                    .UseDefaultServiceProvider(options => options.ValidateScopes = false);
                 });
     }
 }

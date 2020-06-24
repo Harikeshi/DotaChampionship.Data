@@ -1,0 +1,120 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    /*margin: 0;*/
+    background: lightgray;
+}
+
+header {
+    background: orange;
+    text-align: center;
+}
+
+    header a {
+        text-decoration: none;
+        outline: none;
+        display: block;
+        transition: .3s ease-in-out;
+    }
+
+.logo {
+    padding: 3px 0 0 0;
+}
+img{
+    width:inherit;
+}
+
+nav {
+    display: table;
+    margin: 0 auto;
+}
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+.topmenu:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.topmenu > li {
+    /*width: 25%;*/
+    float: left;
+    position: relative;
+    font-family: 'Open Sans',sans-serif;
+    font-size:inherit;
+}
+
+    .topmenu > li > a {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        padding: 15px 30px;
+    }
+
+.topmenu li a:hover {
+    color: navajowhite;
+}
+
+.submenu-link:after {
+    color: inherit;
+    align-items:center;
+    margin-left: 10px;
+}
+
+.submenu {
+    background: darkorange;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 5;
+    width: 180px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: .5s ease-in-out;
+}
+
+    .submenu a {
+        color: black;
+        text-align: left;
+        padding: 12px 15px;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .submenu li:last-child a {
+        border-bottom: none;
+    }
+
+.topmenu > li:hover .submenu {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.center {
+    width: 200px; /* Ширина элемента в пикселах */
+    padding: 10px; /* Поля вокруг текста */
+    margin: auto; /* Выравниваем по центру */
+}
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}

@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "/Views/Shared/Menu.cshtml";
+}
+
+@model IEnumerable<GameViewModel>
+
+<link rel="stylesheet" href="~/css/table.css" />
+
+
+<h3>@ViewBag.Type</h3>
+
+<ul>
+
+    @foreach (var item in Model)
+    {
+        <li>
+            @item.Start
+            <a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@item.Team1.Id">
+                @item.Team1.Name @item.Team1.Logo
+            </a>
+
+            @item.Score1 : @item.Score2
+            <a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@item.Team2.Id">
+                @item.Team2.Logo @item.Team2.Name
+            </a>
+        </li>
+    }
+</ul>

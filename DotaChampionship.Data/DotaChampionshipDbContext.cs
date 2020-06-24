@@ -1,11 +1,6 @@
 ﻿using DotaChampionship.Domain;
-using DotaChampionship.Domain.Champ;
+using DotaChampionship.Domain.Entities.Champ;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DotaChampionship.Data
 {
@@ -17,6 +12,10 @@ namespace DotaChampionship.Data
 
         //}
 
+        public DotaChampionshipDbContext()
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
@@ -25,16 +24,21 @@ namespace DotaChampionship.Data
             optionsBuilder.EnableSensitiveDataLogging();
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+           
+        }
+
         public DbSet<Player> Players { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Personal> Personals { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Game> Games { get; set; }
+        public DbSet<TeamGame> TeamGames { get; set; }
         public DbSet<Commentator> Commentators { get; set; }
         public DbSet<Result> Results { get; set; }
         public DbSet<Year> Years { get; set; }
         public DbSet<Tournament> Tournaments { get; set; }
-        public DbSet<TeamGame> TeamGames { get; set; }
 
 
         public Game GetGame(int id) => Games.Find(id);
@@ -53,7 +57,6 @@ namespace DotaChampionship.Data
             g.BeginTime = game.BeginTime;
             g.EndTime = game.EndTime;
             g.GameType = game.GameType;
-            g.TeamGames = game.TeamGames;
             g.Title = game.Title;
             g.Score1 = game.Score1;
             g.Score2 = game.Score2;
@@ -72,9 +75,7 @@ namespace DotaChampionship.Data
         public void DeleteGame(Game game)
         {
 
-            TeamGames.RemoveRange(TeamGames.Where(tg => tg.GameId == game.Id));
             SaveChanges();
-
 
         }
 

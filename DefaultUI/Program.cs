@@ -1,6 +1,4 @@
 ﻿using DotaChampionship.Data;
-using DotaChampionship.Domain.Champ;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 

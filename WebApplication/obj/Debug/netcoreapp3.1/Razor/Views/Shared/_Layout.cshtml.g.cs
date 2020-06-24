@@ -19,8 +19,22 @@ using WebApplication.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Harikeshi\source\repos\DotaChampionship.Data\WebApplication\Views\_ViewImports.cshtml"
+using DotaChampionship.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\Harikeshi\source\repos\DotaChampionship.Data\WebApplication\Views\_ViewImports.cshtml"
+using DotaChampionship.Domain;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5b9864dc41939f673d112706aae1c4c0bb58198b", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9de1e36e95b646dece05477750464dd2d5badc36", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a7566a22a580ee1cb0d957d0a22970d503bc5825", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -49,7 +63,7 @@ using WebApplication.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b9864dc41939f673d112706aae1c4c0bb58198b3113", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b9864dc41939f673d112706aae1c4c0bb58198b3525", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\"/>\r\n    <title>");
 #nullable restore
 #line 6 "C:\Users\Harikeshi\source\repos\DotaChampionship.Data\WebApplication\Views\Shared\_Layout.cshtml"
@@ -71,7 +85,7 @@ using WebApplication.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b9864dc41939f673d112706aae1c4c0bb58198b4588", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5b9864dc41939f673d112706aae1c4c0bb58198b5000", async() => {
                 WriteLiteral("\r\n    <h1>Product Information</h1>\r\n    <div id=\"mainDiv\">\r\n        ");
 #nullable restore
 #line 20 "C:\Users\Harikeshi\source\repos\DotaChampionship.Data\WebApplication\Views\Shared\_Layout.cshtml"

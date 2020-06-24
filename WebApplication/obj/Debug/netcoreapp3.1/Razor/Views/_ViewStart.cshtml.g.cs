@@ -19,8 +19,22 @@ using WebApplication.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Harikeshi\source\repos\DotaChampionship.Data\WebApplication\Views\_ViewImports.cshtml"
+using DotaChampionship.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\Harikeshi\source\repos\DotaChampionship.Data\WebApplication\Views\_ViewImports.cshtml"
+using DotaChampionship.Domain;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fb15a6fa2b9e89da8d14e27ff92faedafbbc5199", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9de1e36e95b646dece05477750464dd2d5badc36", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a7566a22a580ee1cb0d957d0a22970d503bc5825", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

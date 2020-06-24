@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "/Views/Shared/Menu.cshtml";
+}
+
+@model IEnumerable<WebApplication.Models.ViewModels.TeamWin>
+
+<head>
+    <link rel="style" href="~/css/team.css" />
+</head>
+<body>
+
+    @{
+
+        if (ViewBag.Country == "Китая")
+        {
+
+            <img src="~/img/flags/china.jpg" width="80" height="80" /><h1>
+                Команды из @ViewBag.Country
+            </h1>
+        }
+
+        else if (ViewBag.Country == "Европы")
+        {
+            <img src="~/img/flags/eu.jpg" width="80" height="80" /><h1>
+                Команды из @ViewBag.Country
+            </h1>
+        }
+
+        else if (ViewBag.Country == "США")
+        {
+            <div class=" team_title">
+                <img src="~/img/flags/usa.jpg" width="80" height="80" /><h1>
+                    Команды из @ViewBag.Country
+                </h1>
+            </div>
+        }
+
+        else if (ViewBag.Country == "России")
+        {
+            <img src="~/img/flags/ru.jpg" width="80" height="80" /><h1>
+                Команды из @ViewBag.Country
+            </h1>
+        }
+
+    }
+    <table>
+        <tr>
+            <th>Название команды</th>
+            <th>Количество побед</th>
+            <th>Количество ничей</th>
+        </tr>
+        </>
+        @foreach (var team in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@team.Teams.Id">
+                        <div class="team_id">@team.Teams.Name</div>
+                    </a>
+                </td>
+                <td>
+                    @team.Score
+                </td>
+                <td>
+                    @team.None
+                </td>
+            </tr>
+
+        }
+    </table>
+</body>

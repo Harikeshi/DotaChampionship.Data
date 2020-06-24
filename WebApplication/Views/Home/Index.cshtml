@@ -1,42 +1,175 @@
-﻿@model IEnumerable<Product>
+﻿@model IEnumerable<Team>
 @{
-    Layout = null;
-    ViewBag.Title = "Products";
+    Layout = "/Views/Shared/Menu.cshtml";
 }
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Language Features</title>
+<head>   
+    <title></title>
+    <link href="~/css/gamer.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
 </head>
 
-<body class="p-1">
-    <h3 class="text-center">Products</h3>
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <td>Name</td>
-                <td>Price</td>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item?.Name</td>
-                    <td>@($"{item?.Price:C2}")</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <div class="text-center">
-        <a class="btn btn-primary" asp-action="AddProduct">
-            Add New Product
-        </a>
-    </div>
+<body>
+    <h2 class="index_title"><img src="~/img/dota_logo.jpg" height="30" width="30">Dota 2 | International 2019</h2>
+    <div class="index_box">
+        <div>
+            Серия
+            <p>
+                The International
+            </p>
+        </div>
+        <div>
+            Локация
+            <p>
+                Шанхай
+            </p>
+        </div>
+        <div>
+                Формат
+            <p>
+                Групповой этап и плей-офф
+            </p>
+        </div>
+        <div>
+            Сумма призовых
+            <p>
+                $34 330 068
+            </p>
+        </div>
+        <div>
 
+            Дата проведения
+            <p>
+                15.08.2019 - 25.08.2019
+            </p>
+        </div>
+    </div>
+    <h2></h2>
+    <div>
+        <p>
+            The International — крупнейший турнир года по Dota 2, проводящийся при непосредственном участии компании Valve.
+        </p>
+
+        <p>
+            The International 2019 прошел в Шанхае (Китай) на Mercedes-Benz Arena. Арена вмещает 18 тыс. зрителей. Даты проведения чемпионата: 16–25 августа.
+        </p>
+
+        <p>
+            Призовой фонд The International 2019 составляет более $28 млн. В прошлом году призовой фонд составил $25,5 млн. Такую сумму Valve помогли собрать поклонники Dota 2,
+            которые делали внутриигровые покупки в специальном каталоге Battle Pass. 25% от всех микротранзакций, сделанных через него, перечислялись напрямую в призовой фонд.
+            Battle Pass для девятого The International появился в игре 8 мая.
+        </p>
+
+        <p> В финальной части The International 2019 примут участие 18 команд:</p>
+
+        <ul>
+            <li>
+                12 лучших команд рейтинга Dota Pro Circuit прошли на турнир напрямую — это
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="10" style="color:darkorange">
+                        Virtus.pro
+                    </a>
+                </span>
+                ,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="4" style="color:darkorange">
+                        Team Secret
+                    </a>
+                </span>
+                ,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="6" style="color:darkorange">
+                        Vici Gaming
+                    </a>
+                </span>
+                ,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="5" style="color:darkorange">
+                        Evil Geniuses
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="2" style="color:darkorange">
+                        Team Liquid
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="3" style="color:darkorange">
+                        PSG.LGD
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="13" style="color:darkorange">
+                        Fnatic
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="18" style="color:darkorange">
+                        Ninjas in Pyjamas
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="9" style="color:darkorange">
+                        TNC Predator
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="1" style="color:darkorange">
+                        OG
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="16" style="color:darkorange">
+                        Alliance
+                    </a>
+                </span> и
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="14" style="color:darkorange">
+                        Keen Gaming
+                    </a>
+                </span>;
+            </li>
+            <li>
+                6 участников чемпионата определились через региональные отборочные. Это:
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="15" style="color:darkorange">
+                        Natus Vincere
+                    </a>
+                </span>
+                ,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="17" style="color:darkorange">
+                        Chaos
+                    </a>
+                </span>
+                ,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="7" style="color:darkorange">
+                        Royal Never Give Up
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="11" style="color:darkorange">
+                        Forward Gaming
+                    </a>
+                </span>,
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="12" style="color:darkorange">
+                        Mineski
+                    </a>
+                </span>
+                и
+                <span>
+                    <a asp-area="" asp-controller="Teams" asp-action="GetTeam" asp-route-id="8" style="color:darkorange">
+                        Infamous
+                    </a>
+                </span>.
+            </li>
+
+        </ul>
+    </div>
 </body>
 </html>

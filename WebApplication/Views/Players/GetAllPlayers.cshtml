@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "/Views/Shared/Menu.cshtml";
+}
+
+@model IEnumerable<Player>
+
+
+<head>
+    <link rel="stylesheet" href="~/css/table.css" />
+</head>
+
+<body>
+    <h3>Список всех игроков</h3>
+    <ul>
+        @foreach (var item in Model)
+        {
+
+            <li>
+                <a asp-controller="Players" asp-action="GetPlayer" asp-route-id="@item.Id">
+                    <div>@item.NickName</div>
+                </a>
+            </li>
+        }
+    </ul>
+</body>

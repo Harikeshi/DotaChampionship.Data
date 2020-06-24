@@ -8,16 +8,7 @@ namespace WebApplication.Models
 {
     public static class MyExtensionMethods
     {
-        public static decimal TotalPrice(this ShopingCart cartParam)
-        {
-            decimal total = 0;
-            foreach (var item in cartParam.Products)
-            {
-                total += item?.Price ?? 0;
-            }
-            return total;
-        }
-
+       
         public static decimal TotalPrices(this IEnumerable<Product> products)
         {
             decimal total = 0;

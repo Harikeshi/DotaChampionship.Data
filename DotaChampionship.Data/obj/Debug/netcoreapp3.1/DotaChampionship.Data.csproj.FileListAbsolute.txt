@@ -8,8 +8,8 @@ C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Data.dll
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Data.pdb
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\bin\Debug\netcoreapp3.1\DotaChampionship.Domain.pdb
-C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.csproj.CoreCompileInputs.cache
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.csproj.CopyComplete
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.dll
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.pdb
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.genruntimeconfig.cache
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DotaChampionship.Data\obj\Debug\netcoreapp3.1\DotaChampionship.Data.csproj.CoreCompileInputs.cache

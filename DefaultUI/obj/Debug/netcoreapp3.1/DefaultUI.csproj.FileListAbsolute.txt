@@ -52,3 +52,8 @@ C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\obj\Debug\netcor
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\obj\Debug\netcoreapp3.1\DefaultUI.dll
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\obj\Debug\netcoreapp3.1\DefaultUI.pdb
 C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\obj\Debug\netcoreapp3.1\DefaultUI.genruntimeconfig.cache
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Harikeshi\source\repos\DotaChampionship.Data\DefaultUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

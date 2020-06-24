@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "/Views/Shared/Menu.cshtml";
+}
+@model TeamPlayers
+
+<head>
+    <link href="~/css/team.css" rel="stylesheet" />
+    <link href="~/css/gamer.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    <div class="description_team">
+        <div>
+            <img src="~/img/logo_cover.jpeg" width="100" height="100" />
+        </div>
+
+        <div>
+            <h1>@Model.Team.Name</h1>
+            <strong>Страна:</strong>
+            @Model.Team.Country
+
+            <p class="facts__meta">
+                <strong>Основан:</strong>
+                @Model.Team.Year
+            </p>
+            <p class="facts__meta">
+                <strong>Сайт:</strong>
+                <a href="@Model.Team.Url" rel="nofollow noopener noreferrer" target="_blank">@Model.Team.Url</a>
+            </p>
+
+            <p>@Model.Team.Description</p>
+        </div>
+    </div>
+    <h3 class="center">Игроки</h3>
+
+    <div class="player_grid">
+        <div class="player_block"><strong>Игрок</strong></div>
+        <div class="player_block"><strong>Статус</strong></div>
+        <div class="player_block"><strong>Роль</strong></div>
+        <div class="player_block"><strong>Дата последней игры</strong></div>
+        <div class="player_block"><strong>Возраст</strong></div>
+    </div>
+
+
+    @foreach (var item in Model.Players)
+    {
+        <hr />
+        <div class="player_grid">
+            <div class="player_block">
+              
+                <a class="player_id" asp-controller="Players" asp-action="GetPlayer" asp-route-id="@item.Id">@item.NickName</a>
+            </div>
+            <div class="player_block">
+                Игрок
+            </div>
+            <div class="player_block player_role">@item.Role</div>
+            <div class="player_block">09.05.2020</div>
+            <div class="player_block">N/A</div>
+        </div>
+    }
+    <hr />
+</body>

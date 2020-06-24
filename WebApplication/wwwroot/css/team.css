@@ -1,0 +1,39 @@
+﻿.description_team {
+    margin-top: 30px;
+    display: flex;
+    align-items: stretch;
+}
+
+.player_grid {
+    /* flexbox - указывает, что содержимое контейнер выводиться по горизонтали или по вертикали в зависимости от параметра box-orient */
+    display: flex;
+    flex-direction: row; /* vertical */
+    align-content: center;
+    align-items: center;
+}
+
+.player_block {
+    width: 180px;
+    padding: 10px;
+    margin: 0px;
+}
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: slategray; /* Цвет линии */
+    color: slategray; /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
+}
+
+.player_id {
+    color: darkorange;
+    font-weight: bold;
+}
+.player_role{
+    color:violet;
+    font-weight:bold;
+}
+
+.team_title{
+    font-size:22px;
+}

@@ -15,11 +15,31 @@ namespace DotaChampionship.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3")
+                .HasAnnotation("ProductVersion", "5.0.0-preview.3.20181.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.Commentator", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CountryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<byte[]>("Logo")
+                        .HasColumnType("varbinary(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
+                });
+
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.Commentator", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,7 +65,7 @@ namespace DotaChampionship.Data.Migrations
                     b.ToTable("Commentators");
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.Game", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.Game", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -78,9 +98,11 @@ namespace DotaChampionship.Data.Migrations
                     b.HasIndex("TournamentId");
 
                     b.ToTable("Games");
+
+                    b.HasCheckConstraint("CK_Games_GameType_Enum_Constraint", "[GameType] IN(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)");
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.Result", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.Result", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -110,7 +132,7 @@ namespace DotaChampionship.Data.Migrations
                     b.ToTable("Results");
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.TeamGame", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.TeamGame", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -135,7 +157,7 @@ namespace DotaChampionship.Data.Migrations
                     b.ToTable("TeamGames");
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.Tournament", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.Tournament", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -165,7 +187,7 @@ namespace DotaChampionship.Data.Migrations
                     b.ToTable("Tournaments");
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.Year", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.Year", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -184,23 +206,6 @@ namespace DotaChampionship.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Years");
-                });
-
-            modelBuilder.Entity("DotaChampionship.Domain.Country", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CountryName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("DotaChampionship.Domain.Personal", b =>
@@ -252,6 +257,9 @@ namespace DotaChampionship.Data.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
+                    b.Property<byte[]>("Logo")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<string>("NickName")
                         .HasColumnType("nvarchar(max)");
 
@@ -277,6 +285,15 @@ namespace DotaChampionship.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Logo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
@@ -285,61 +302,66 @@ namespace DotaChampionship.Data.Migrations
                     b.Property<string>("Url")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
 
                     b.ToTable("Teams");
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.Commentator", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.Commentator", b =>
                 {
-                    b.HasOne("DotaChampionship.Domain.Champ.Game", "Game")
+                    b.HasOne("DotaChampionship.Domain.Entities.Champ.Game", "Game")
                         .WithMany("Commentators")
                         .HasForeignKey("GameId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.Game", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.Game", b =>
                 {
-                    b.HasOne("DotaChampionship.Domain.Champ.Tournament", "Tournament")
+                    b.HasOne("DotaChampionship.Domain.Entities.Champ.Tournament", "Tournament")
                         .WithMany("Games")
                         .HasForeignKey("TournamentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.TeamGame", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.TeamGame", b =>
                 {
-                    b.HasOne("DotaChampionship.Domain.Champ.Game", "Game")
+                    b.HasOne("DotaChampionship.Domain.Entities.Champ.Game", "Game")
                         .WithMany("TeamGames")
                         .HasForeignKey("GameId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DotaChampionship.Domain.Team", "Team")
-                        .WithMany()
+                        .WithMany("TeamGames")
                         .HasForeignKey("TeamId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DotaChampionship.Domain.Champ.Tournament", b =>
+            modelBuilder.Entity("DotaChampionship.Domain.Entities.Champ.Tournament", b =>
                 {
                     b.HasOne("DotaChampionship.Domain.Country", "Country")
                         .WithOne("Tournament")
-                        .HasForeignKey("DotaChampionship.Domain.Champ.Tournament", "CountryId")
+                        .HasForeignKey("DotaChampionship.Domain.Entities.Champ.Tournament", "CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DotaChampionship.Domain.Champ.Result", "Result")
+                    b.HasOne("DotaChampionship.Domain.Entities.Champ.Result", "Result")
                         .WithOne("Tournament")
-                        .HasForeignKey("DotaChampionship.Domain.Champ.Tournament", "ResultId")
+                        .HasForeignKey("DotaChampionship.Domain.Entities.Champ.Tournament", "ResultId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DotaChampionship.Domain.Champ.Year", "Year")
+                    b.HasOne("DotaChampionship.Domain.Entities.Champ.Year", "Year")
                         .WithOne("Tournament")
-                        .HasForeignKey("DotaChampionship.Domain.Champ.Tournament", "YearId")
+                        .HasForeignKey("DotaChampionship.Domain.Entities.Champ.Tournament", "YearId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -364,6 +386,15 @@ namespace DotaChampionship.Data.Migrations
                     b.HasOne("DotaChampionship.Domain.Team", "Team")
                         .WithMany("Players")
                         .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DotaChampionship.Domain.Team", b =>
+                {
+                    b.HasOne("DotaChampionship.Domain.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

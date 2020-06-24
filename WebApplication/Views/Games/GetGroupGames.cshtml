@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "/Views/Shared/Menu.cshtml";
+}
+
+@model IEnumerable<GameViewModel>
+<head>
+    <link rel="stylesheet" href="~/css/game.css" />
+</head>
+<body>
+    <h3 class="game_title">@ViewBag.Type</h3>
+
+    <div class="grid">
+        <div class="block">
+
+        </div>
+        <div class="block">Дата</div>
+        <div class="block">Команда 1</div>
+        <div class="block">Счет</div>
+        <div class="block">Команда 2</div>
+    </div>
+
+    @foreach (var item in Model)
+    {
+
+        <hr />
+        <div class="grid">
+            <div class="block">
+
+            </div>
+            <div class="block">
+                @item.Start
+            </div>
+            <div class="block">
+                <a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@item.Team1.Id" class="team_id">
+                    @item.Team1.Name
+                    <img src="~/img/dota_logo.jpg" width="20" height="20" />
+                </a>
+
+            </div>
+
+            <div class="block">
+                <a class="score_points" asp-controller="Games" asp-action="GetGame" asp-route-id="@item.GameId">
+                    @item.Score1 : @item.Score2
+                </a>
+            </div>
+
+            <div class="block">
+                <a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@item.Team2.Id" class="team_id">
+                    <img src="~/img/dota_logo.jpg" width="20" height="20" />
+                    @item.Team2.Name
+                </a>
+            </div>
+        </div>
+
+    }
+    <hr />
+</body>

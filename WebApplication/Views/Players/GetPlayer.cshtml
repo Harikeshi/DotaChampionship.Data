@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "/Views/Shared/Menu.cshtml";
+}
+
+@model PlayerViewModel
+
+<head>
+    <link href="~/css/team.css" rel="stylesheet" />
+    <link href="~/css/gamer.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="description_team">
+        <div>
+            <img src="~/img/logo_cover.jpeg" width="100" height="100" />
+        </div>
+        <div>
+            <h2>@Model.Player.NickName</h2>
+
+            <div>
+                <p>Имя: @Model.Personal.LastName @Model.Personal.FirstName</p>
+                <p>Родился: @Model.Personal.Birthday</p>
+                <p>Команда:<a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@Model.Player.TeamId">@ViewBag.Team</a> </p>
+                <p>Страна: @Model.Country.CountryName</p>
+                <h4>Участие в командах</h4>
+                <p>
+                    <a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@Model.Player.TeamId">
+                        @ViewBag.Team
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</body>

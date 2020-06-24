@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dota2 International 2019</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/search.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <article>
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
+            <img src="~/img/logo.jpg" />
+        </a>
+    </article>
+    <header>
+        <nav>
+
+            <ul class="topmenu">
+                <li>
+                    <img src="~/img/logo0.jpg" />
+                </li>
+                <li>
+                    <img class="logo" src="~/img/dota_logo1.jpg" />
+                </li>
+                <li>
+                    <img class="logo" src="~/img/logo2.jpg" />
+                </li>
+
+                <li>
+                    <a class="submenu-link">ГРУППОВОЙ ЭТАП</a>
+                    <ul class="submenu">
+                        <li><a asp-area="" asp-controller="Games" asp-action="GetGroupGames" asp-route-id="0">Группа А</a></li>
+                        <li><a asp-area="" asp-controller="Games" asp-action="GetGroupGames" asp-route-id="1">Группа Б</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="submenu-link">ОСНОВНОЙ ТУРНИР</a>
+                    <ul class="submenu">
+                        <li><a asp-area="" asp-controller="Games" asp-action="GetGroupGames" asp-route-id="7">Четвертьфинал</a></li>
+                        <li><a asp-area="" asp-controller="Games" asp-action="GetGroupGames" asp-route-id="8">Полуфинал</a></li>
+                        <li><a asp-area="" asp-controller="Games" asp-action="GetGroupGames" asp-route-id="10">Финал</a></li>
+                        <li><a asp-area="" asp-controller="Games" asp-action="GetGroupGames" asp-route-id="12">Гранд-финал</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="submenu-link">КОМАНДЫ</a>
+                    <ul class="submenu">
+                        <li><a asp-area="" asp-controller="Teams" asp-action="GetTeams" asp-route-id="10">Китай</a></li>
+                        <li><a asp-area="" asp-controller="Teams" asp-action="GetTeams" asp-route-id="3">Америка</a></li>
+                        <li><a asp-area="" asp-controller="Teams" asp-action="GetTeams" asp-route-id="17">Россия</a></li>
+                        <li><a asp-area="" asp-controller="Teams" asp-action="GetTeams" asp-route-id="29">Европа</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="submenu-link" asp-area="" asp-controller="Players" asp-action="GetAllPlayers">ИГРОКИ</a>
+                <li>
+                    <!--Логин-->
+                    @*<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                            <partial name="_LoginPartial" /><ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                </li>
+                            </ul>
+                        </div>*@
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+            @RenderSection("scripts", required: false)
+        </main>
+    </div>
+</body>
+</html>

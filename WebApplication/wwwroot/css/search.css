@@ -1,0 +1,10 @@
+﻿.active-cyan-2 input.form-control[type=text]:focus{
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+    margin-top:5px;
+    width:300px;
+}
+.active-cyan-2 input.form-control[type=text]:not(:empty){
+    margin:5px;
+    width:500px;
+}

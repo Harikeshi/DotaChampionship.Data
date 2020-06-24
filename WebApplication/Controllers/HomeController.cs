@@ -6,14 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebApplication.Models;
+using WebApplication.Repositories;
 
 namespace WebApplication.Controllers
 {
     public class HomeController : Controller
     {
-        DotaChampionshipDbContext _context = new DotaChampionshipDbContext();
-        SimpleRepository repo = SimpleRepository.SharedRepository;
+        private SimpleRepository repository;
 
+        public HomeController()
+        {
+            repository = new SimpleRepository();
+        }
 
 
         [HttpGet]
@@ -22,9 +26,8 @@ namespace WebApplication.Controllers
         [HttpPost]
         public IActionResult AddProduct(Product p)
         {
-            repo.AddProduct(p);
-            return RedirectToAction("Index");
 
+            return RedirectToAction("Index");
         }
 
         public ViewResult Index()
@@ -40,19 +43,8 @@ namespace WebApplication.Controllers
 
             //    results.Add(string.Format("Name:{0}, Price:{1}, Related{2}", name, price,relatedName));
             //}
+            return View(repository.Teams);
 
-            return View(repo.Products.Where(p => p?.Price > 0));
-        }
-        public ViewResult GetPlayers()
-        {
-
-            List<string> players = new List<string>();
-
-            foreach (var item in _context.Players)
-            {
-                players.Add(item.NickName);
-            }
-            return View(players);
-        }
+        }     
     }
 }

@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "/Views/Shared/Menu.cshtml";
+}
+
+@model GameViewModel
+
+<head>
+    <link rel="stylesheet" href="~/css/table.css" />
+    <link rel="stylesheet" href="~/css/game.css" />
+</head>
+<body>
+    <div class="game_title">
+        <h3>@Model.Team1.Name VS @Model.Team2.Name</h3>
+    </div>
+
+    <div class="team_id">
+        @Model.Start
+        <a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@Model.Team1.Id">
+            @Model.Team1.Name <img src="~/img/dota_logo.jpg" height="20" width="20">
+        </a>
+
+        @Model.Score1 : @Model.Score2
+        <a asp-controller="Teams" asp-action="GetTeam" asp-route-id="@Model.Team2.Id">
+            <img src="~/img/dota_logo.jpg" height="20" width="20"> @Model.Team2.Name
+        </a>
+    </div>
+    <div>
+        Информация по игре:
+    </div>
+</body>
